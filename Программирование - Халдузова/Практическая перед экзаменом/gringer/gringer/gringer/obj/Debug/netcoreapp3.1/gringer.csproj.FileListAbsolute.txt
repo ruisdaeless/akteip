@@ -1,0 +1,15 @@
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\bin\Debug\netcoreapp3.1\gringer.exe
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\bin\Debug\netcoreapp3.1\gringer.deps.json
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\bin\Debug\netcoreapp3.1\gringer.runtimeconfig.json
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\bin\Debug\netcoreapp3.1\gringer.runtimeconfig.dev.json
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\bin\Debug\netcoreapp3.1\gringer.dll
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\bin\Debug\netcoreapp3.1\gringer.pdb
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.csprojAssemblyReference.cache
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.gringer_base.resources
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.csproj.GenerateResource.cache
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.AssemblyInfoInputs.cache
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.AssemblyInfo.cs
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.csproj.CoreCompileInputs.cache
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.dll
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.pdb
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.genruntimeconfig.cache

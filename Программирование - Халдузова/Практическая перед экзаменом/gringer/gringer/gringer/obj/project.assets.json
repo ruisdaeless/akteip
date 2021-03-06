@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Mark\\.nuget\\packages\\": {}
+    "C:\\Users\\MrAngryFox\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Clouds\\Repositoryes\\akteip\\Программирование - Халдузова\\Практическая перед экзаменом\\gringer\\gringer\\gringer\\gringer.csproj",
+      "projectUniqueName": "D:\\Mark's place\\Repo\\akteip\\Программирование - Халдузова\\Практическая перед экзаменом\\gringer\\gringer\\gringer\\gringer.csproj",
       "projectName": "gringer",
-      "projectPath": "D:\\Clouds\\Repositoryes\\akteip\\Программирование - Халдузова\\Практическая перед экзаменом\\gringer\\gringer\\gringer\\gringer.csproj",
-      "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
-      "outputPath": "D:\\Clouds\\Repositoryes\\akteip\\Программирование - Халдузова\\Практическая перед экзаменом\\gringer\\gringer\\gringer\\obj\\",
+      "projectPath": "D:\\Mark's place\\Repo\\akteip\\Программирование - Халдузова\\Практическая перед экзаменом\\gringer\\gringer\\gringer\\gringer.csproj",
+      "packagesPath": "C:\\Users\\MrAngryFox\\.nuget\\packages\\",
+      "outputPath": "D:\\Mark's place\\Repo\\akteip\\Программирование - Халдузова\\Практическая перед экзаменом\\gringer\\gringer\\gringer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MrAngryFox\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
