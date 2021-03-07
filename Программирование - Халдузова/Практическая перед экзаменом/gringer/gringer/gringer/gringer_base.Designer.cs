@@ -30,11 +30,29 @@ namespace gringer
         private void InitializeComponent()
         {
             System.Windows.Forms.Panel up_panel;
+            this.help = new System.Windows.Forms.Button();
+            this.save = new System.Windows.Forms.Button();
+            this.open = new System.Windows.Forms.Button();
             this.left_panel = new System.Windows.Forms.Panel();
+            this.sorgt_right = new System.Windows.Forms.Button();
+            this.sort_right = new System.Windows.Forms.Button();
+            this.start = new System.Windows.Forms.Button();
+            this.clear = new System.Windows.Forms.Button();
+            this.clear_left = new System.Windows.Forms.Button();
+            this.sort_left = new System.Windows.Forms.Button();
             this.section_2 = new System.Windows.Forms.Label();
             this.section_1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.choose_emails = new System.Windows.Forms.RadioButton();
+            this.choose_numbers = new System.Windows.Forms.RadioButton();
+            this.choose_all = new System.Windows.Forms.RadioButton();
             this.search = new System.Windows.Forms.GroupBox();
+            this.checkbox_insection2 = new System.Windows.Forms.CheckBox();
+            this.checkbox_insection1 = new System.Windows.Forms.CheckBox();
+            this.button_search = new System.Windows.Forms.Button();
+            this.listbox_insearch = new System.Windows.Forms.ListBox();
+            this.write_looking_word = new System.Windows.Forms.Label();
+            this.textboxt_insearch = new System.Windows.Forms.TextBox();
             this.listbox_right = new System.Windows.Forms.ListBox();
             this.listbox_left = new System.Windows.Forms.ListBox();
             this.panel_center = new System.Windows.Forms.Panel();
@@ -47,22 +65,10 @@ namespace gringer
             this.combobox_right = new System.Windows.Forms.ComboBox();
             this.combobox_left = new System.Windows.Forms.ComboBox();
             this.right_text_panel = new System.Windows.Forms.TextBox();
-            this.sort_left = new System.Windows.Forms.Button();
-            this.clear_left = new System.Windows.Forms.Button();
-            this.sort_right = new System.Windows.Forms.Button();
-            this.sorgt_right = new System.Windows.Forms.Button();
-            this.textboxt_insearch = new System.Windows.Forms.TextBox();
-            this.write_looking_word = new System.Windows.Forms.Label();
-            this.listbox_insearch = new System.Windows.Forms.ListBox();
-            this.checkbox_insection1 = new System.Windows.Forms.CheckBox();
-            this.checkbox_insection2 = new System.Windows.Forms.CheckBox();
-            this.button_search = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.start = new System.Windows.Forms.Button();
-            this.clear = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             up_panel = new System.Windows.Forms.Panel();
+            up_panel.SuspendLayout();
             this.left_panel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.search.SuspendLayout();
@@ -72,11 +78,50 @@ namespace gringer
             // up_panel
             // 
             up_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(76)))));
+            up_panel.Controls.Add(this.help);
+            up_panel.Controls.Add(this.save);
+            up_panel.Controls.Add(this.open);
             up_panel.Location = new System.Drawing.Point(0, 0);
             up_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             up_panel.Name = "up_panel";
             up_panel.Size = new System.Drawing.Size(1000, 35);
             up_panel.TabIndex = 0;
+            // 
+            // help
+            // 
+            this.help.Cursor = System.Windows.Forms.Cursors.Default;
+            this.help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.help.Location = new System.Drawing.Point(174, 5);
+            this.help.Name = "help";
+            this.help.Size = new System.Drawing.Size(75, 23);
+            this.help.TabIndex = 0;
+            this.help.Text = "Справка";
+            this.help.UseVisualStyleBackColor = true;
+            this.help.Click += new System.EventHandler(this.help_Click);
+            // 
+            // save
+            // 
+            this.save.Cursor = System.Windows.Forms.Cursors.Default;
+            this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save.Location = new System.Drawing.Point(93, 5);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(75, 23);
+            this.save.TabIndex = 0;
+            this.save.Text = "Сохранить";
+            this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.save_Click);
+            // 
+            // open
+            // 
+            this.open.Cursor = System.Windows.Forms.Cursors.Default;
+            this.open.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.open.Location = new System.Drawing.Point(12, 5);
+            this.open.Name = "open";
+            this.open.Size = new System.Drawing.Size(75, 23);
+            this.open.TabIndex = 0;
+            this.open.Text = "Открыть";
+            this.open.UseVisualStyleBackColor = true;
+            this.open.Click += new System.EventHandler(this.open_Click);
             // 
             // left_panel
             // 
@@ -101,6 +146,62 @@ namespace gringer
             this.left_panel.Size = new System.Drawing.Size(675, 680);
             this.left_panel.TabIndex = 1;
             // 
+            // sorgt_right
+            // 
+            this.sorgt_right.Location = new System.Drawing.Point(550, 345);
+            this.sorgt_right.Name = "sorgt_right";
+            this.sorgt_right.Size = new System.Drawing.Size(110, 30);
+            this.sorgt_right.TabIndex = 0;
+            this.sorgt_right.Text = "Очистить";
+            this.sorgt_right.UseVisualStyleBackColor = true;
+            // 
+            // sort_right
+            // 
+            this.sort_right.Location = new System.Drawing.Point(430, 345);
+            this.sort_right.Name = "sort_right";
+            this.sort_right.Size = new System.Drawing.Size(110, 30);
+            this.sort_right.TabIndex = 0;
+            this.sort_right.Text = "Сортировать";
+            this.sort_right.UseVisualStyleBackColor = true;
+            // 
+            // start
+            // 
+            this.start.Location = new System.Drawing.Point(381, 516);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(272, 69);
+            this.start.TabIndex = 0;
+            this.start.Text = "Начать";
+            this.start.UseVisualStyleBackColor = true;
+            this.start.Click += new System.EventHandler(this.start_Click);
+            // 
+            // clear
+            // 
+            this.clear.Location = new System.Drawing.Point(381, 591);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(272, 45);
+            this.clear.TabIndex = 0;
+            this.clear.Text = "Сброс";
+            this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
+            // 
+            // clear_left
+            // 
+            this.clear_left.Location = new System.Drawing.Point(135, 345);
+            this.clear_left.Name = "clear_left";
+            this.clear_left.Size = new System.Drawing.Size(110, 30);
+            this.clear_left.TabIndex = 0;
+            this.clear_left.Text = "Очистить";
+            this.clear_left.UseVisualStyleBackColor = true;
+            // 
+            // sort_left
+            // 
+            this.sort_left.Location = new System.Drawing.Point(14, 345);
+            this.sort_left.Name = "sort_left";
+            this.sort_left.Size = new System.Drawing.Size(110, 30);
+            this.sort_left.TabIndex = 0;
+            this.sort_left.Text = "Сортировать";
+            this.sort_left.UseVisualStyleBackColor = true;
+            // 
             // section_2
             // 
             this.section_2.AutoSize = true;
@@ -121,9 +222,9 @@ namespace gringer
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.choose_emails);
+            this.groupBox1.Controls.Add(this.choose_numbers);
+            this.groupBox1.Controls.Add(this.choose_all);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(375, 399);
             this.groupBox1.Name = "groupBox1";
@@ -132,6 +233,39 @@ namespace gringer
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Выбор слов";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // choose_emails
+            // 
+            this.choose_emails.AutoSize = true;
+            this.choose_emails.Location = new System.Drawing.Point(6, 80);
+            this.choose_emails.Name = "choose_emails";
+            this.choose_emails.Size = new System.Drawing.Size(135, 19);
+            this.choose_emails.TabIndex = 0;
+            this.choose_emails.TabStop = true;
+            this.choose_emails.Text = "Содержащие e-mail";
+            this.choose_emails.UseVisualStyleBackColor = true;
+            // 
+            // choose_numbers
+            // 
+            this.choose_numbers.AutoSize = true;
+            this.choose_numbers.Location = new System.Drawing.Point(6, 55);
+            this.choose_numbers.Name = "choose_numbers";
+            this.choose_numbers.Size = new System.Drawing.Size(140, 19);
+            this.choose_numbers.TabIndex = 0;
+            this.choose_numbers.TabStop = true;
+            this.choose_numbers.Text = "Содержащие цифры";
+            this.choose_numbers.UseVisualStyleBackColor = true;
+            // 
+            // choose_all
+            // 
+            this.choose_all.AutoSize = true;
+            this.choose_all.Location = new System.Drawing.Point(6, 30);
+            this.choose_all.Name = "choose_all";
+            this.choose_all.Size = new System.Drawing.Size(44, 19);
+            this.choose_all.TabIndex = 0;
+            this.choose_all.TabStop = true;
+            this.choose_all.Text = "Все";
+            this.choose_all.UseVisualStyleBackColor = true;
             // 
             // search
             // 
@@ -149,6 +283,60 @@ namespace gringer
             this.search.TabStop = false;
             this.search.Text = "Поиск";
             this.search.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // checkbox_insection2
+            // 
+            this.checkbox_insection2.AutoSize = true;
+            this.checkbox_insection2.Location = new System.Drawing.Point(16, 218);
+            this.checkbox_insection2.Name = "checkbox_insection2";
+            this.checkbox_insection2.Size = new System.Drawing.Size(72, 19);
+            this.checkbox_insection2.TabIndex = 3;
+            this.checkbox_insection2.Text = "Раздел 2";
+            this.checkbox_insection2.UseVisualStyleBackColor = true;
+            // 
+            // checkbox_insection1
+            // 
+            this.checkbox_insection1.AutoSize = true;
+            this.checkbox_insection1.Location = new System.Drawing.Point(16, 193);
+            this.checkbox_insection1.Name = "checkbox_insection1";
+            this.checkbox_insection1.Size = new System.Drawing.Size(72, 19);
+            this.checkbox_insection1.TabIndex = 3;
+            this.checkbox_insection1.Text = "Раздел 1";
+            this.checkbox_insection1.UseVisualStyleBackColor = true;
+            // 
+            // button_search
+            // 
+            this.button_search.Location = new System.Drawing.Point(156, 192);
+            this.button_search.Name = "button_search";
+            this.button_search.Size = new System.Drawing.Size(110, 45);
+            this.button_search.TabIndex = 0;
+            this.button_search.Text = "Поиск";
+            this.button_search.UseVisualStyleBackColor = true;
+            // 
+            // listbox_insearch
+            // 
+            this.listbox_insearch.FormattingEnabled = true;
+            this.listbox_insearch.ItemHeight = 15;
+            this.listbox_insearch.Location = new System.Drawing.Point(16, 77);
+            this.listbox_insearch.Name = "listbox_insearch";
+            this.listbox_insearch.Size = new System.Drawing.Size(250, 109);
+            this.listbox_insearch.TabIndex = 2;
+            // 
+            // write_looking_word
+            // 
+            this.write_looking_word.AutoSize = true;
+            this.write_looking_word.Location = new System.Drawing.Point(16, 30);
+            this.write_looking_word.Name = "write_looking_word";
+            this.write_looking_word.Size = new System.Drawing.Size(137, 15);
+            this.write_looking_word.TabIndex = 1;
+            this.write_looking_word.Text = "Введите искомое слово";
+            // 
+            // textboxt_insearch
+            // 
+            this.textboxt_insearch.Location = new System.Drawing.Point(16, 48);
+            this.textboxt_insearch.Name = "textboxt_insearch";
+            this.textboxt_insearch.Size = new System.Drawing.Size(250, 23);
+            this.textboxt_insearch.TabIndex = 0;
             // 
             // listbox_right
             // 
@@ -217,6 +405,7 @@ namespace gringer
             this.add.TabIndex = 0;
             this.add.Text = "Добавить";
             this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // to_right_all
             // 
@@ -263,146 +452,9 @@ namespace gringer
             this.right_text_panel.Size = new System.Drawing.Size(283, 680);
             this.right_text_panel.TabIndex = 2;
             // 
-            // sort_left
+            // openFileDialog1
             // 
-            this.sort_left.Location = new System.Drawing.Point(14, 345);
-            this.sort_left.Name = "sort_left";
-            this.sort_left.Size = new System.Drawing.Size(110, 30);
-            this.sort_left.TabIndex = 0;
-            this.sort_left.Text = "Сортировать";
-            this.sort_left.UseVisualStyleBackColor = true;
-            // 
-            // clear_left
-            // 
-            this.clear_left.Location = new System.Drawing.Point(135, 345);
-            this.clear_left.Name = "clear_left";
-            this.clear_left.Size = new System.Drawing.Size(110, 30);
-            this.clear_left.TabIndex = 0;
-            this.clear_left.Text = "Очистить";
-            this.clear_left.UseVisualStyleBackColor = true;
-            // 
-            // sort_right
-            // 
-            this.sort_right.Location = new System.Drawing.Point(430, 345);
-            this.sort_right.Name = "sort_right";
-            this.sort_right.Size = new System.Drawing.Size(110, 30);
-            this.sort_right.TabIndex = 0;
-            this.sort_right.Text = "Сортировать";
-            this.sort_right.UseVisualStyleBackColor = true;
-            // 
-            // sorgt_right
-            // 
-            this.sorgt_right.Location = new System.Drawing.Point(550, 345);
-            this.sorgt_right.Name = "sorgt_right";
-            this.sorgt_right.Size = new System.Drawing.Size(110, 30);
-            this.sorgt_right.TabIndex = 0;
-            this.sorgt_right.Text = "Очистить";
-            this.sorgt_right.UseVisualStyleBackColor = true;
-            // 
-            // textboxt_insearch
-            // 
-            this.textboxt_insearch.Location = new System.Drawing.Point(16, 48);
-            this.textboxt_insearch.Name = "textboxt_insearch";
-            this.textboxt_insearch.Size = new System.Drawing.Size(250, 23);
-            this.textboxt_insearch.TabIndex = 0;
-            // 
-            // write_looking_word
-            // 
-            this.write_looking_word.AutoSize = true;
-            this.write_looking_word.Location = new System.Drawing.Point(16, 30);
-            this.write_looking_word.Name = "write_looking_word";
-            this.write_looking_word.Size = new System.Drawing.Size(137, 15);
-            this.write_looking_word.TabIndex = 1;
-            this.write_looking_word.Text = "Введите искомое слово";
-            // 
-            // listbox_insearch
-            // 
-            this.listbox_insearch.FormattingEnabled = true;
-            this.listbox_insearch.ItemHeight = 15;
-            this.listbox_insearch.Location = new System.Drawing.Point(16, 77);
-            this.listbox_insearch.Name = "listbox_insearch";
-            this.listbox_insearch.Size = new System.Drawing.Size(250, 109);
-            this.listbox_insearch.TabIndex = 2;
-            // 
-            // checkbox_insection1
-            // 
-            this.checkbox_insection1.AutoSize = true;
-            this.checkbox_insection1.Location = new System.Drawing.Point(16, 193);
-            this.checkbox_insection1.Name = "checkbox_insection1";
-            this.checkbox_insection1.Size = new System.Drawing.Size(72, 19);
-            this.checkbox_insection1.TabIndex = 3;
-            this.checkbox_insection1.Text = "Раздел 1";
-            this.checkbox_insection1.UseVisualStyleBackColor = true;
-            // 
-            // checkbox_insection2
-            // 
-            this.checkbox_insection2.AutoSize = true;
-            this.checkbox_insection2.Location = new System.Drawing.Point(16, 218);
-            this.checkbox_insection2.Name = "checkbox_insection2";
-            this.checkbox_insection2.Size = new System.Drawing.Size(72, 19);
-            this.checkbox_insection2.TabIndex = 3;
-            this.checkbox_insection2.Text = "Раздел 2";
-            this.checkbox_insection2.UseVisualStyleBackColor = true;
-            // 
-            // button_search
-            // 
-            this.button_search.Location = new System.Drawing.Point(156, 192);
-            this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(110, 45);
-            this.button_search.TabIndex = 0;
-            this.button_search.Text = "Поиск";
-            this.button_search.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 30);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(44, 19);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Все";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 55);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(140, 19);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Содержащие цифры";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 80);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(135, 19);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Содержащие e-mail";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // start
-            // 
-            this.start.Location = new System.Drawing.Point(381, 516);
-            this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(272, 69);
-            this.start.TabIndex = 0;
-            this.start.Text = "Начать";
-            this.start.UseVisualStyleBackColor = true;
-            // 
-            // clear
-            // 
-            this.clear.Location = new System.Drawing.Point(381, 591);
-            this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(272, 45);
-            this.clear.TabIndex = 0;
-            this.clear.Text = "Сброс";
-            this.clear.UseVisualStyleBackColor = true;
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // gringer_base
             // 
@@ -416,8 +468,10 @@ namespace gringer
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "gringer_base";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Мясорубка";
             this.Load += new System.EventHandler(this.gringer_base_Load_1);
+            up_panel.ResumeLayout(false);
             this.left_panel.ResumeLayout(false);
             this.left_panel.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -458,13 +512,18 @@ namespace gringer
         private System.Windows.Forms.ListBox listbox_insearch;
         private System.Windows.Forms.Label write_looking_word;
         private System.Windows.Forms.TextBox textboxt_insearch;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton choose_emails;
+        private System.Windows.Forms.RadioButton choose_numbers;
+        private System.Windows.Forms.RadioButton choose_all;
         private System.Windows.Forms.CheckBox checkbox_insection2;
         private System.Windows.Forms.Button button_search;
         private System.Windows.Forms.Button start;
         private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.Button help;
+        private System.Windows.Forms.Button open;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button save;
     }
 }
 
