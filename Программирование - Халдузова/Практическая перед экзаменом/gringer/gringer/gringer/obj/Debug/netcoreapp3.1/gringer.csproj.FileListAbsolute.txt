@@ -13,3 +13,4 @@ D:\Mark's place\Repo\akteip\Программирование - Халдузов�
 D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.dll
 D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.pdb
 D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.genruntimeconfig.cache
+D:\Mark's place\Repo\akteip\Программирование - Халдузова\Практическая перед экзаменом\gringer\gringer\gringer\obj\Debug\netcoreapp3.1\gringer.add_form.resources
