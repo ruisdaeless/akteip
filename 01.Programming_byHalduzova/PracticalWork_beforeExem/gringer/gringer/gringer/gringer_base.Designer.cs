@@ -30,11 +30,12 @@ namespace gringer
         private void InitializeComponent()
         {
             System.Windows.Forms.Panel up_panel;
+            this.close = new System.Windows.Forms.Button();
             this.help = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
             this.open = new System.Windows.Forms.Button();
             this.left_panel = new System.Windows.Forms.Panel();
-            this.sorgt_right = new System.Windows.Forms.Button();
+            this.clear_right = new System.Windows.Forms.Button();
             this.sort_right = new System.Windows.Forms.Button();
             this.start = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
@@ -77,7 +78,8 @@ namespace gringer
             // 
             // up_panel
             // 
-            up_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(76)))));
+            up_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(91)))), ((int)(((byte)(123)))));
+            up_panel.Controls.Add(this.close);
             up_panel.Controls.Add(this.help);
             up_panel.Controls.Add(this.save);
             up_panel.Controls.Add(this.open);
@@ -87,46 +89,59 @@ namespace gringer
             up_panel.Size = new System.Drawing.Size(1000, 35);
             up_panel.TabIndex = 0;
             // 
+            // close
+            // 
+            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.close.Location = new System.Drawing.Point(913, 7);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(75, 23);
+            this.close.TabIndex = 1;
+            this.close.Text = "Закрыть";
+            this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // help
             // 
             this.help.Cursor = System.Windows.Forms.Cursors.Default;
             this.help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.help.Location = new System.Drawing.Point(174, 5);
+            this.help.Location = new System.Drawing.Point(174, 7);
             this.help.Name = "help";
             this.help.Size = new System.Drawing.Size(75, 23);
             this.help.TabIndex = 0;
             this.help.Text = "Справка";
-            this.help.UseVisualStyleBackColor = true;
+            this.help.UseVisualStyleBackColor = false;
             this.help.Click += new System.EventHandler(this.help_Click);
             // 
             // save
             // 
+            this.save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(91)))), ((int)(((byte)(123)))));
             this.save.Cursor = System.Windows.Forms.Cursors.Default;
             this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save.Location = new System.Drawing.Point(93, 5);
+            this.save.Location = new System.Drawing.Point(93, 7);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(75, 23);
             this.save.TabIndex = 0;
             this.save.Text = "Сохранить";
-            this.save.UseVisualStyleBackColor = true;
+            this.save.UseVisualStyleBackColor = false;
             this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // open
             // 
+            this.open.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(91)))), ((int)(((byte)(123)))));
             this.open.Cursor = System.Windows.Forms.Cursors.Default;
             this.open.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.open.Location = new System.Drawing.Point(12, 5);
+            this.open.Location = new System.Drawing.Point(12, 7);
             this.open.Name = "open";
             this.open.Size = new System.Drawing.Size(75, 23);
             this.open.TabIndex = 0;
             this.open.Text = "Открыть";
-            this.open.UseVisualStyleBackColor = true;
+            this.open.UseVisualStyleBackColor = false;
             this.open.Click += new System.EventHandler(this.open_Click);
             // 
             // left_panel
             // 
             this.left_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.left_panel.Controls.Add(this.sorgt_right);
+            this.left_panel.Controls.Add(this.clear_right);
             this.left_panel.Controls.Add(this.sort_right);
             this.left_panel.Controls.Add(this.start);
             this.left_panel.Controls.Add(this.clear);
@@ -146,61 +161,70 @@ namespace gringer
             this.left_panel.Size = new System.Drawing.Size(675, 680);
             this.left_panel.TabIndex = 1;
             // 
-            // sorgt_right
+            // clear_right
             // 
-            this.sorgt_right.Location = new System.Drawing.Point(550, 345);
-            this.sorgt_right.Name = "sorgt_right";
-            this.sorgt_right.Size = new System.Drawing.Size(110, 30);
-            this.sorgt_right.TabIndex = 0;
-            this.sorgt_right.Text = "Очистить";
-            this.sorgt_right.UseVisualStyleBackColor = true;
+            this.clear_right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
+            this.clear_right.Location = new System.Drawing.Point(550, 345);
+            this.clear_right.Name = "clear_right";
+            this.clear_right.Size = new System.Drawing.Size(110, 30);
+            this.clear_right.TabIndex = 0;
+            this.clear_right.Text = "Очистить";
+            this.clear_right.UseVisualStyleBackColor = false;
+            this.clear_right.Click += new System.EventHandler(this.sorgt_right_Click);
             // 
             // sort_right
             // 
+            this.sort_right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.sort_right.Location = new System.Drawing.Point(430, 345);
             this.sort_right.Name = "sort_right";
             this.sort_right.Size = new System.Drawing.Size(110, 30);
             this.sort_right.TabIndex = 0;
             this.sort_right.Text = "Сортировать";
-            this.sort_right.UseVisualStyleBackColor = true;
+            this.sort_right.UseVisualStyleBackColor = false;
             // 
             // start
             // 
+            this.start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.start.Location = new System.Drawing.Point(381, 516);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(272, 69);
             this.start.TabIndex = 0;
             this.start.Text = "Начать";
-            this.start.UseVisualStyleBackColor = true;
+            this.start.UseVisualStyleBackColor = false;
             this.start.Click += new System.EventHandler(this.start_Click);
             // 
             // clear
             // 
+            this.clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.clear.Location = new System.Drawing.Point(381, 591);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(272, 45);
             this.clear.TabIndex = 0;
             this.clear.Text = "Сброс";
-            this.clear.UseVisualStyleBackColor = true;
+            this.clear.UseVisualStyleBackColor = false;
             this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
             // clear_left
             // 
+            this.clear_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.clear_left.Location = new System.Drawing.Point(135, 345);
             this.clear_left.Name = "clear_left";
             this.clear_left.Size = new System.Drawing.Size(110, 30);
             this.clear_left.TabIndex = 0;
             this.clear_left.Text = "Очистить";
-            this.clear_left.UseVisualStyleBackColor = true;
+            this.clear_left.UseVisualStyleBackColor = false;
+            this.clear_left.Click += new System.EventHandler(this.clear_left_Click);
             // 
             // sort_left
             // 
+            this.sort_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.sort_left.Location = new System.Drawing.Point(14, 345);
             this.sort_left.Name = "sort_left";
             this.sort_left.Size = new System.Drawing.Size(110, 30);
             this.sort_left.TabIndex = 0;
             this.sort_left.Text = "Сортировать";
-            this.sort_left.UseVisualStyleBackColor = true;
+            this.sort_left.UseVisualStyleBackColor = false;
+            this.sort_left.Click += new System.EventHandler(this.sort_left_Click);
             // 
             // section_2
             // 
@@ -266,6 +290,7 @@ namespace gringer
             this.choose_all.TabStop = true;
             this.choose_all.Text = "Все";
             this.choose_all.UseVisualStyleBackColor = true;
+            this.choose_all.CheckedChanged += new System.EventHandler(this.choose_all_CheckedChanged);
             // 
             // search
             // 
@@ -306,15 +331,18 @@ namespace gringer
             // 
             // button_search
             // 
+            this.button_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.button_search.Location = new System.Drawing.Point(156, 192);
             this.button_search.Name = "button_search";
             this.button_search.Size = new System.Drawing.Size(110, 45);
             this.button_search.TabIndex = 0;
             this.button_search.Text = "Поиск";
-            this.button_search.UseVisualStyleBackColor = true;
+            this.button_search.UseVisualStyleBackColor = false;
+            this.button_search.Click += new System.EventHandler(this.button_search_Click);
             // 
             // listbox_insearch
             // 
+            this.listbox_insearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.listbox_insearch.FormattingEnabled = true;
             this.listbox_insearch.ItemHeight = 15;
             this.listbox_insearch.Location = new System.Drawing.Point(16, 77);
@@ -333,6 +361,7 @@ namespace gringer
             // 
             // textboxt_insearch
             // 
+            this.textboxt_insearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.textboxt_insearch.Location = new System.Drawing.Point(16, 48);
             this.textboxt_insearch.Name = "textboxt_insearch";
             this.textboxt_insearch.Size = new System.Drawing.Size(250, 23);
@@ -340,21 +369,25 @@ namespace gringer
             // 
             // listbox_right
             // 
+            this.listbox_right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.listbox_right.FormattingEnabled = true;
             this.listbox_right.ItemHeight = 15;
             this.listbox_right.Location = new System.Drawing.Point(430, 80);
             this.listbox_right.Name = "listbox_right";
             this.listbox_right.Size = new System.Drawing.Size(230, 259);
             this.listbox_right.TabIndex = 3;
+            this.listbox_right.SelectedIndexChanged += new System.EventHandler(this.listbox_right_SelectedIndexChanged);
             // 
             // listbox_left
             // 
+            this.listbox_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.listbox_left.FormattingEnabled = true;
             this.listbox_left.ItemHeight = 15;
             this.listbox_left.Location = new System.Drawing.Point(15, 80);
             this.listbox_left.Name = "listbox_left";
             this.listbox_left.Size = new System.Drawing.Size(230, 259);
             this.listbox_left.TabIndex = 2;
+            this.listbox_left.SelectedIndexChanged += new System.EventHandler(this.listbox_left_SelectedIndexChanged);
             // 
             // panel_center
             // 
@@ -372,62 +405,79 @@ namespace gringer
             // 
             // del
             // 
+            this.del.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.del.Location = new System.Drawing.Point(9, 253);
             this.del.Name = "del";
             this.del.Size = new System.Drawing.Size(125, 30);
             this.del.TabIndex = 0;
             this.del.Text = "Удалить";
-            this.del.UseVisualStyleBackColor = true;
+            this.del.UseVisualStyleBackColor = false;
+            this.del.Click += new System.EventHandler(this.del_Click);
             // 
             // to_left_all
             // 
+            this.to_left_all.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.to_left_all.Location = new System.Drawing.Point(9, 118);
             this.to_left_all.Name = "to_left_all";
             this.to_left_all.Size = new System.Drawing.Size(125, 30);
             this.to_left_all.TabIndex = 0;
             this.to_left_all.Text = "<<";
-            this.to_left_all.UseVisualStyleBackColor = true;
+            this.to_left_all.UseVisualStyleBackColor = false;
+            this.to_left_all.Click += new System.EventHandler(this.to_left_all_Click);
             // 
             // to_left
             // 
+            this.to_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.to_left.Location = new System.Drawing.Point(9, 46);
             this.to_left.Name = "to_left";
             this.to_left.Size = new System.Drawing.Size(125, 30);
             this.to_left.TabIndex = 0;
             this.to_left.Text = "<";
-            this.to_left.UseVisualStyleBackColor = true;
+            this.to_left.UseVisualStyleBackColor = false;
+            this.to_left.Click += new System.EventHandler(this.to_left_Click);
             // 
             // add
             // 
+            this.add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.add.Location = new System.Drawing.Point(9, 217);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(125, 30);
             this.add.TabIndex = 0;
             this.add.Text = "Добавить";
-            this.add.UseVisualStyleBackColor = true;
+            this.add.UseVisualStyleBackColor = false;
             this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // to_right_all
             // 
+            this.to_right_all.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.to_right_all.Location = new System.Drawing.Point(9, 82);
             this.to_right_all.Name = "to_right_all";
             this.to_right_all.Size = new System.Drawing.Size(125, 30);
             this.to_right_all.TabIndex = 0;
             this.to_right_all.Text = ">>";
-            this.to_right_all.UseVisualStyleBackColor = true;
+            this.to_right_all.UseVisualStyleBackColor = false;
+            this.to_right_all.Click += new System.EventHandler(this.to_right_all_Click);
             // 
             // to_right
             // 
+            this.to_right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.to_right.Location = new System.Drawing.Point(9, 10);
             this.to_right.Name = "to_right";
             this.to_right.Size = new System.Drawing.Size(125, 30);
             this.to_right.TabIndex = 0;
             this.to_right.Text = ">";
-            this.to_right.UseVisualStyleBackColor = true;
+            this.to_right.UseVisualStyleBackColor = false;
+            this.to_right.Click += new System.EventHandler(this.to_right_Click);
             // 
             // combobox_right
             // 
+            this.combobox_right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.combobox_right.FormattingEnabled = true;
+            this.combobox_right.Items.AddRange(new object[] {
+            "Алфавиту (по возрастанию)",
+            "Алфавиту (по убыванию)",
+            "Количеству букв (по возрастанию)",
+            "Количеству букв (по убыванию)"});
             this.combobox_right.Location = new System.Drawing.Point(430, 48);
             this.combobox_right.Name = "combobox_right";
             this.combobox_right.Size = new System.Drawing.Size(230, 23);
@@ -436,7 +486,13 @@ namespace gringer
             // 
             // combobox_left
             // 
+            this.combobox_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.combobox_left.FormattingEnabled = true;
+            this.combobox_left.Items.AddRange(new object[] {
+            "Алфавиту (по возрастанию)",
+            "Алфавиту (по убыванию)",
+            "Количеству букв (по возрастанию)",
+            "Количеству букв (по убыванию)"});
             this.combobox_left.Location = new System.Drawing.Point(14, 48);
             this.combobox_left.Name = "combobox_left";
             this.combobox_left.Size = new System.Drawing.Size(231, 23);
@@ -445,7 +501,7 @@ namespace gringer
             // 
             // right_text_panel
             // 
-            this.right_text_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(195)))), ((int)(((byte)(209)))));
+            this.right_text_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(244)))), ((int)(((byte)(251)))));
             this.right_text_panel.Location = new System.Drawing.Point(705, 50);
             this.right_text_panel.Multiline = true;
             this.right_text_panel.Name = "right_text_panel";
@@ -468,7 +524,7 @@ namespace gringer
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "gringer_base";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Мясорубка";
             this.Load += new System.EventHandler(this.gringer_base_Load_1);
             up_panel.ResumeLayout(false);
@@ -504,7 +560,7 @@ namespace gringer
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button to_right_all;
         private System.Windows.Forms.Button to_right;
-        private System.Windows.Forms.Button sorgt_right;
+        private System.Windows.Forms.Button clear_right;
         private System.Windows.Forms.Button sort_right;
         private System.Windows.Forms.Button clear_left;
         private System.Windows.Forms.Button sort_left;
@@ -524,6 +580,7 @@ namespace gringer
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button save;
+        private System.Windows.Forms.Button close;
     }
 }
 
