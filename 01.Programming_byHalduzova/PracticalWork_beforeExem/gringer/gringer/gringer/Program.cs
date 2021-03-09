@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// Copyright by Bolotin Maxim CCA-30
+
 namespace gringer
 {
     static class Program
