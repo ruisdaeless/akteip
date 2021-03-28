@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 
+// Copyright by Bolotin Maxim CCA-30
+
+
 namespace gringer
 {
     public partial class add_form : Form
